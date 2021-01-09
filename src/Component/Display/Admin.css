@@ -1,0 +1,23 @@
+.Container {
+  height: 100%;
+  width: 100%;
+}
+.MuiBox-root-39 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.MuiGrid-grid-md-6 {
+  flex-grow: 0;
+  max-width: 48%;
+  flex-basis: 50%;
+}
+
+.img-container {
+  margin-left: 300px;
+}
+.post-Container {
+  margin: 0px;
+}
