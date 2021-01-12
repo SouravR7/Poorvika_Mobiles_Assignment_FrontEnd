@@ -63,6 +63,7 @@ function Admin(props) {
         })
         .catch((err) => console.log(err));
     }
+    handleClose();
   };
 
   const handleDelete = (id) => {

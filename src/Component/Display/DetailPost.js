@@ -43,7 +43,7 @@ function DetailPost(props) {
     axios
       .get(`http://localhost:7000/api/get/${props.match.params.id}`)
       .then((res) => {
-        console.log(res.data);
+        //console.log(res.data);
         setData(res.data);
       })
       .catch((err) => console.log(err));

@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     flex: 1,
   },
   cardMedia: {
-    height: 270,
+    height: 280,
     width: 150,
   },
 });
@@ -58,10 +58,10 @@ function Post(props) {
   //   };
   return (
     <Grid item xs={12} md={6}>
-      <CardActionArea onClick={() => navigateToDetails(id)}>
+      <CardActionArea>
         <Card className={classes.card}>
           <div className={classes.cardDetails}>
-            <CardContent>
+            <CardContent onClick={() => navigateToDetails(id)}>
               <Typography component="h2" variant="h5">
                 {title}
               </Typography>
@@ -75,23 +75,23 @@ function Post(props) {
               <Typography variant="subtitle2" color="primary">
                 Continue Reading...
               </Typography>
-              <Box display="flex" justifyContent="space-around">
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  className={classes.button}
-                  startIcon={<DeleteIcon />}
-                  onClick={() => handleDlete(id)}
-                ></Button>
-
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className={classes.button}
-                  endIcon={<CreateIcon />}
-                ></Button>
-              </Box>
             </CardContent>
+            <Box display="flex" justifyContent="space-around">
+              <Button
+                variant="contained"
+                color="secondary"
+                className={classes.button}
+                startIcon={<DeleteIcon />}
+                onClick={() => handleDlete(id)}
+              ></Button>
+
+              <Button
+                variant="contained"
+                color="primary"
+                className={classes.button}
+                endIcon={<CreateIcon />}
+              ></Button>
+            </Box>
           </div>
           <Hidden xsDown>
             <CardMedia

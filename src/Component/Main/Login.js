@@ -42,6 +42,7 @@ export default function Login(props) {
   const [password, setPassword] = useState("");
 
   const validate = () => {
+    //debugger;
     if (!email || !password) {
       window.alert("*Please enter the mandatory fields");
       return;
@@ -56,9 +57,9 @@ export default function Login(props) {
     }
     return true;
   };
-
   const handleClick = (e) => {
     e.preventDefault();
+
     if (validate()) {
       axios
         .post("http://localhost:7000/api/login", {
@@ -67,6 +68,7 @@ export default function Login(props) {
         })
         .then((response) => {
           console.log(response.data);
+
           if (response.status === 400) {
             window.alert(response.data);
           } else if (response.status === 200) {
@@ -75,7 +77,7 @@ export default function Login(props) {
           }
         })
         .catch((error) => {
-          console.log(error);
+          window.alert("Invalid Credintial", error);
         });
     }
   };

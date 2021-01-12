@@ -176,7 +176,7 @@ function Dashboard() {
             noWrap
             className={classes.title}
           >
-            Sports Blog
+            Cric-Log
           </Typography>
 
           <Typography
