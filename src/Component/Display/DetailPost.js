@@ -41,7 +41,7 @@ function DetailPost(props) {
   const [data, setData] = useState({});
   useEffect(() => {
     axios
-      .get(`http://localhost:7000/api/get/${props.match.params.id}`)
+      .get(`https://sportsblog-backend.herokuapp.com/api/get/${props.match.params.id}`)
       .then((res) => {
         //console.log(res.data);
         setData(res.data);

@@ -66,20 +66,22 @@ export default function SignUp(props) {
   const handleClick = (e) => {
     e.preventDefault();
     if (validate()) {
+      console.log("SignUp going")
       axios
-        .post("http://localhost:7000/api/register", {
+        .post("https://sportsblog-backend.herokuapp.com/api/register", {
           firstname,
           lastname,
           email,
-          password,
+          password
         })
         .then((response) => {
           window.alert("registered SucessFull");
           console.log(response.data);
           props.history.push("/");
+          
         })
         .catch((error) => {
-          console.log(error);
+          window.alert("Email ID already Exists")
         });
     }
   };

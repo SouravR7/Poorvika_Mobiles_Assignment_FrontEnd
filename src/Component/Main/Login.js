@@ -62,7 +62,7 @@ export default function Login(props) {
 
     if (validate()) {
       axios
-        .post("http://localhost:7000/api/login", {
+        .post("https://sportsblog-backend.herokuapp.com/api/login", {
           email,
           password,
         })

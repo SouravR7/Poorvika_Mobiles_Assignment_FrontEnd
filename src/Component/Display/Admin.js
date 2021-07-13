@@ -24,7 +24,7 @@ function Admin(props) {
   //const dataRef = useRef();
   useEffect(() => {
     axios
-      .get("http://localhost:7000/api/get")
+      .get("https://sportsblog-backend.herokuapp.com/api/get")
       .then((res) => {
         //console.log(res.data);
 
@@ -51,7 +51,7 @@ function Admin(props) {
   const handleSave = () => {
     if (isValidate()) {
       axios
-        .post("http://localhost:7000/api/create", {
+        .post("https://sportsblog-backend.herokuapp.com/api/create", {
           imgURL,
           description,
           title,
@@ -68,7 +68,7 @@ function Admin(props) {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:7000/api/delete/${id}`)
+      .delete(`https://sportsblog-backend.herokuapp.com/api/delete/${id}`)
       .then((res) => {
         console.log(res.data);
       })

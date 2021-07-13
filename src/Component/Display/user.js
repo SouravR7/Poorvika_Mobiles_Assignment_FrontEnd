@@ -17,7 +17,7 @@ function User(props) {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:7000/api/get")
+      .get("https://sportsblog-backend.herokuapp.com/api/get")
       .then((res) => {
         //console.log(res.data);
 
